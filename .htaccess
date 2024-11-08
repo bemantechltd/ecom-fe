@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^medquicker\.com [NC]
+RewriteRule ^(.*)$ https://medquicker.com/$1 [R,L]
+
+RewriteRule ^(.*) http://127.0.0.1:3037/$1 [P,L]

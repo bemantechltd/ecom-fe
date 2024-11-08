@@ -1,0 +1,133 @@
+stages:
+  - package
+  - build  
+  - deploy
+
+# Package_staging:
+#   image: node
+#   stage: package
+#   script:
+#     - echo "$PACKAGE_FILE_STAGING" > package.json
+#     - ls
+#     - npm install --force
+#   artifacts:
+#     expire_in: 1 week
+#     paths: 
+#       - node_modules      
+#   only:
+#     - staging
+
+Build_staging:
+  image: node
+  stage: build
+  script:
+    - echo "$ENV_FILE_STAGING" > .env
+    - echo "$CONFIG_FILE_STAGING" > nuxt.config.js
+    # - echo "$PACKAGE_FILE_STAGING" > package.json
+    - ls
+    # - npm install --force
+    - npm run build
+  artifacts:
+    expire_in: 1 week
+    paths: 
+      - .nuxt
+      - static
+      - nuxt.config.js
+      - package.json
+  only:
+    - staging-test
+     
+# Deploy_staging:
+#   image: alpine
+#   stage: deploy
+#   script:
+#     - apk add --no-cache rsync openssh
+#     - mkdir -p ~/.ssh
+#     - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_dsa
+#     - chmod 600 ~/.ssh/id_dsa
+#     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+#     - rsync -rav --delete .nuxt/ tamannaorange@67.227.213.5:~/public_html/backend/.nuxt
+#     - rsync -rav  server/ tamannaorange@67.227.213.5:~/public_html/backend/server
+#     - rsync -rav  static/ tamannaorange@67.227.213.5:~/public_html/backend/static
+#     - rsync  nuxt.config.js tamannaorange@67.227.213.5:~/public_html/backend/   
+#     - rsync  package.json tamannaorange@67.227.213.5:~/public_html/backend/
+#     - ssh tamannaorange@67.227.213.5 "cd ~/public_html/backend && rm -f package-lock.json && npm install && pm2 restart MedQuickerStage && exit"
+#   environment:
+#     name: production
+#     url: https://tamanna.orangebd.com
+#   only:
+#     - staging
+
+# deploy_staging:
+#   image: node:latest
+#   stage: deploy
+#   script:
+#     - apt-get update -y
+#     - apt-get install zip -y
+#     - npm i -g fume-cli
+#     - echo FUME_TOKEN is "$FUME_TOKEN"
+#     - echo "$FUME_TOKEN" > FUME_TOKEN
+#     # - export FUME_TOKEN=$FUME_TOKEN
+#     # - echo "$ENV_FILE_STAGING" > .env
+#     # - echo "$CONFIG_FILE_STAGING" > nuxt.config.js
+#     # - ls -la /tmp
+#     - ls
+#     - fume deploy staging
+#   artifacts:
+#     expire_in: 1 week
+#     paths:
+#       - .env
+#       - node_modules
+#       - nuxt.config.js
+#       - .nuxt/dist
+#   only:
+#     - staging
+
+# Build_live:
+#   image: node
+#   stage: build
+#   script:
+#     - echo "$ENV_FILE_LIVE" > .env
+#     - echo "$CONFIG_FILE_LIVE" > nuxt.config.js
+#     - echo "$PACKAGE_FILE_LIVE" > package.json
+#     - ls
+#     - cat nuxt.config.js
+#     - cat package.json
+#     - npm install --force
+#     - npm run build:modern
+#   artifacts:
+#     expire_in: 1 week
+#     paths: 
+#       - .nuxt
+#       - static
+#       - node_modules
+#       - nuxt.config.js
+#       - package.json
+#   # when: manual
+#   only:
+#     - master
+
+# Deploy live:
+#   image: alpine
+#   stage: deploy
+#   needs:
+#     - job: Build_live
+#       artifacts: true
+#   script:
+#     - apk add --no-cache rsync openssh
+#     - mkdir -p ~/.ssh
+#     - echo "$SSH_PRIVATE_KEY_LIVE" >> ~/.ssh/id_dsa
+#     - chmod 600 ~/.ssh/id_dsa
+#     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+#     - rsync -rav --delete .nuxt/ medquicker@67.227.227.252:~/public_html/frontend/.nuxt
+#     - rsync -rav  server/ medquicker@67.227.227.252:~/public_html/frontend/server
+#     - rsync -rav  static/ medquicker@67.227.227.252:~/public_html/frontend/static
+#     - rsync  nuxt.config.js medquicker@67.227.227.252:~/public_html/frontend/   
+#     - rsync  package.json medquicker@67.227.227.252:~/public_html/frontend/
+#     - ssh medquicker@67.227.227.252 "cd ~/public_html/frontend && rm -f package-lock.json && npm install && pm2 restart MedQuicker && exit"
+#   environment:
+#     name: production
+#     url: https://medquicker.com
+#   # when: manual
+#   only:
+#     - main    
