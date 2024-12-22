@@ -4,9 +4,15 @@
 
 ## Build Setup
 
+### Node Version(16.16.0)
+
+
 ``` bash
 # install dependencies
-$ npm run install
+$ npm install
+
+# ensure that your Nuxt CLI and related packages are updated:
+$ npm install -g @nuxt/cli
 
 # serve with hot reload at localhost:3000
 $ npm run dev
