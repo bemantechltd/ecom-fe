@@ -7,13 +7,13 @@
         format="webp"
         title="Logo"
         alt="Logo"
-        :src="$store.state.logo_info_data.dark_logo"        
+        src="https://bemantech.com/wp-content/uploads/2024/04/full-logo.png"        
       />
       <nuxt-img
         v-else        
         format="webp"
         alt="Logo"
-        src="/images/logo.white.png"      
+        src="https://bemantech.com/wp-content/uploads/2024/04/full-logo.png"      
       />
     </template>
     <template v-else>
@@ -21,13 +21,13 @@
         v-if="$store.state.logo_info_data.logo"
         format="webp"
         alt="Logo"
-        :src="$store.state.logo_info_data.logo"
+        src="https://bemantech.com/wp-content/uploads/2024/04/full-logo.png"
       />
       <nuxt-img
         v-else
         format="webp"
         alt="Logo"
-        src="/images/logo.png"      
+        src="https://bemantech.com/wp-content/uploads/2024/04/full-logo.png"      
       />
     </template>    
   </div>

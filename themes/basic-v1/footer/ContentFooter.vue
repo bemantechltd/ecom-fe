@@ -30,11 +30,11 @@
                         <span class="bar"></span>
                     </div>
 
-                    <div class="contact_info mt-3">
-                        <div v-html="$store.state.site_basic_config_data.printer_line_txt"></div>
-                        <!-- <div>House-171, Lane-1, Baridhara DOHS, Dhaka - 1206</div>
+                    <div class="contact_info mt-3" style="color:#fff;">
+                        <!-- <div v-html="$store.state.site_basic_config_data.printer_line_txt"></div> -->
+                        <div>Kawasaki City, Asao Ward, Nijigaoka 2-3-22-301,Japan <br/>A-5, Saus Nahar Garden( 6th floor), Ovijan 29, Collage gate, Auchpara, Tongi, Gazipur, Dhaka, Bangladesh</div>
                         <div>Mobile: +880 1716******, +880 1673******</div>
-                        <div>E-mail: <a href="mailto:support@orangebd.com">support@orangebd.com</a></div> -->
+                        <div>E-mail: <a href="mailto:support@bemantech.com" style="color:#fff !important;">support@bemantech.com</a></div>
                     </div>
                 </div>
                 <div class="col-md-4">

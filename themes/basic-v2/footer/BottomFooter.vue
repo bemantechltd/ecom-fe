@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-md-6 pt-2 pb-2" align="right">
                     <div class="developer_info">
-                        <span>Developed by <a href="https://orangebd.com" target="_blank"><img src="~/assets/images/orangebd.png" /></a></span>
+                        <span>Developed by <a href="https://bemantech.com" target="_blank"><img src="https://bemantech.com/wp-content/uploads/2024/04/full-logo.png" /></a></span>
                     </div>
                 </div>
             </div>
