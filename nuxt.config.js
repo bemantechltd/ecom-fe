@@ -108,7 +108,7 @@ export default {
     },
     meta: {
       title: 'Pharmacy eCommerce Application',
-      author: 'Md. Rokibul Hossain | Orangebd',
+      author: 'Ariful Sibly | Bemantech',
     },
     manifest: {
       name: process.env.npm_package_name,

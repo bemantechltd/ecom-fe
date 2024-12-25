@@ -31,7 +31,7 @@
                     <!-- {{ $store.state.auth_info.user_data.user_type }}
                     {{ $store.state.user_dashboard_path  }}
                     {{ $store.state.auth_info.loggedIn }} -->
-                    <template v-if="$store.state.auth_info.user_data.user_type==$store.state.customer_user_type_id && $store.state.auth_info.loggedIn">
+                    <!-- <template v-if="$store.state.auth_info.user_data.user_type==$store.state.customer_user_type_id && $store.state.auth_info.loggedIn">
                         <nuxt-link :to="{path: '/user/my-prescriptions?action=new'}" class="upload_prescription_btn" title="Upload Prescription">
                             <i class="fa fa-prescription"></i>
                             <span>Prescription Upload</span>
@@ -42,7 +42,7 @@
                             <i class="fa fa-prescription"></i>
                             <span>Prescription Upload</span>
                         </span>
-                    </template>
+                    </template> -->
                     <!-- <span class="install-app-btn-container" id="installApp">
                         <i class="fa fa-download"></i>
                     </span> -->
