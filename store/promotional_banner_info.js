@@ -34,7 +34,9 @@ export const actions = {
                 'X-XSRF-TOKEN': request.access_token
             }
         }
-        // console.log('Promotional banners data request')      
+        console.log('Promotional banners data request')
+        console.log('headerObj', headerObj)      
+        console.log('headerObj', request.access_token)      
         try {
             const { data } = await this.$axios.get('/api/promotional-banners/load' + (request['limit']>0?'?limit=' + request['limit']:'') + (request['page']?'&page=' + request['page']:''), headerObj)
             // eslint-disable-next-line no-console

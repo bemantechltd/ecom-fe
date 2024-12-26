@@ -77,16 +77,17 @@
         // }
       }else{
         console.log('Fetch OAUTh TOKEN')
-        // try{
-        //   await store.dispatch('oauth_token/GET_TOKEN_INFO')
+        try{
+          await store.dispatch('oauth_token/GET_TOKEN_INFO')
 
-        //   let oauth_token = store.state.oauth_token.data
-        //   $cookiz.set(store.state.outh_token_name, JSON.stringify(oauth_token))
-        //   store.commit('oauth_token/CACHE_STATUS', true)
-        //   redirect(`${process.env.BASE_URL}`)
-        // } catch (e) {
-        //   return error({ message: e.message, statuscode: e.response.status })
-        // }
+          let oauth_token = store.state.oauth_token.data
+          // console.log('oauth_token',oauth_token);
+          $cookiz.set(store.state.outh_token_name, JSON.stringify(oauth_token))
+          store.commit('oauth_token/CACHE_STATUS', true)
+          // redirect(`${process.env.BASE_URL}`)
+        } catch (e) {
+          return error({ message: e.message, statuscode: e.response.status })
+        }
       }
 
       // console.log('Fetch LOGO INFO')

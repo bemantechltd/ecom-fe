@@ -17,6 +17,7 @@ export const state = () => ({
     ADD_TOKEN (state, data) {
       state.data = data
       state.token = data.access_token
+      console.log('access-token: ', state.token);
     },
     // cache status
     CACHE_STATUS (state, status) {
@@ -63,7 +64,8 @@ export const state = () => ({
 
     // eslint-disable-next-line require-await
     async GET_TOKEN_INFO ({ commit }) {
-      // console.log('Request for oauth token')
+      console.log('Request for oauth token')
+      // alert('Request for oauth token')
       try {
         const { data } = await this.$axios.post('/oauth/token', {
           'grant_type': 'client_credentials',
@@ -75,7 +77,7 @@ export const state = () => ({
           }
         })
         // eslint-disable-next-line no-console
-        // console.log('Data', data)
+        console.log('Data', data)
         commit('ADD_TOKEN', data)
       } catch (err) {
         // eslint-disable-next-line no-console

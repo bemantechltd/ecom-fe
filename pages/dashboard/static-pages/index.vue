@@ -81,6 +81,7 @@ export default {
             form_submit_state: 'FORM_SUBMIT_STATUS'
         }),
         async load_data(pg=this.cur_page){
+            console.log('this.header_config', this.header_config);
             let url = '/api/static-page-infos'+ (this.limit>0?'?limit=' + this.limit:'') + (pg>1?'&page=' + pg:'') + (this.$parent.$parent.role_access.view_others=='0'?'&own_result=true':'') + (this.$store.state.search_keyword?'&keyword=' + this.$store.state.search_keyword:'');
 
             this.content_loader = true
