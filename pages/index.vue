@@ -32,7 +32,7 @@
             // let getTokenType = JSON.parse(localStorage.getItem('oauth_token'));
             const { data } = await $axios.$get('/api/site-init-info', headerObj)
             // eslint-disable-next-line no-console
-            // console.log('Get data', data)
+            console.log('site-init-info: ','Get data', data)
 
             store.commit('BASIC_CONFIG_DATA', data.basic_config_info)
             store.commit('LOGO_INFO_DATA', data.logo_info)

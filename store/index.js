@@ -28,9 +28,9 @@ export const state = () => ({
                 onClick: 'page'
             },
             3: {
-                name: 'Pharmaceutical Companies',
-                path: '/dashboard/pharmaceuticals-companies',
-                route: 'dashboard-pharmaceuticals-companies',
+                name: 'Companies',
+                path: '/dashboard/companies',
+                route: 'dashboard-companies',
                 icon: '<i class="fa fa-hospital"></i>',
                 position: 'dashboard-left-nav',
                 onClick: 'page'
