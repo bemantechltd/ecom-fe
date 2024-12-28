@@ -10,7 +10,7 @@
         <ManageAccount v-if="cur_user_page=='manage-account'" />
         <ManageAddress v-else-if="cur_user_page=='manage-address'" />
         <MyOrders v-else-if="cur_user_page=='my-orders'" />
-        <MyPrescriptions v-else-if="cur_user_page=='my-prescriptions'" />
+        
         <MyReturnProducts v-else-if="cur_user_page=='my-return-products'" />
         <ChangePassword v-else-if="cur_user_page=='change-password'" />
         <MyDashboard v-else />

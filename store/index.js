@@ -274,15 +274,15 @@ export const state = () => ({
             allow_user_type: 3, // user_type_id [1 => admin,2 => delivery person,3 => customer]
             icon: '<i class="fa fa-arrow-rotate-left"></i>'
         },
+        // 7: {
+        //     name: 'My Prescriptions',
+        //     path: '/user/my-prescriptions',
+        //     page: 'my-prescriptions',
+        //     allow: false,
+        //     allow_user_type: 3, // user_type_id [1 => admin,2 => delivery person,3 => customer]
+        //     icon: '<i class="fa fa-prescription"></i>'
+        // },
         7: {
-            name: 'My Prescriptions',
-            path: '/user/my-prescriptions',
-            page: 'my-prescriptions',
-            allow: false,
-            allow_user_type: 3, // user_type_id [1 => admin,2 => delivery person,3 => customer]
-            icon: '<i class="fa fa-prescription"></i>'
-        },
-        8: {
             name: 'My reviews',
             path: '/user/my-reviews',
             page: 'my-reviews',
@@ -290,7 +290,7 @@ export const state = () => ({
             allow_user_type: 2, // user_type_id [1 => admin,2 => delivery person,3 => customer]
             icon: '<i class="far fa-star"></i>'
         },
-        9: {
+        8: {
             name: 'Change Password',
             path: '/user/change-password',
             page: 'change-password',
