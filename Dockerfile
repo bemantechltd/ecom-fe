@@ -1,9 +1,10 @@
-FROM node:14.17.3
+FROM node:18.12.0 
+# v18.20.5
 
 WORKDIR /usr/src/app
 
 COPY . ./
-RUN npm install
+RUN npx yarn install
 
 EXPOSE 3037
 
