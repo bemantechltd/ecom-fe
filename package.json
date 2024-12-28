@@ -2,7 +2,7 @@
   "name": "medquicker",
   "version": "1.0.0",
   "description": "Pharmacy Content Management System for eCommerce Business",
-  "author": "Md. Rokibul Hossain | ORANGEBD",
+  "author": "Md. Tarequl Islam | BEMANTECH",
   "private": true,
   "scripts": {
     "dev": "nuxt",

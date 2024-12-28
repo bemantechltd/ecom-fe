@@ -5,7 +5,7 @@
                 <span class="version_info">CMS - v1.0.1</span>
             </div>
             <div class="float-right">
-                <span class="dev_info">Developed by <a href="https://www.orangebd.com" target="_blank"><img src="~/assets/images/orangebd.png" /></a></span>
+                <span class="dev_info">Developed by <a href="https://www.bemantech.com" target="_blank"><img src="~/assets/images/bemantech.png" /></a></span>
             </div>
         </div>
     </div>

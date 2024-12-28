@@ -122,10 +122,10 @@
 
         <div class="footer_section">
             <div class="powered_by">
-                <span>Powered by <a href="https://tamannapharmacy.com" target="_blank"><img src="/_ipx/images/powered-by.png" title="Powered by image" alt="Powered by image" /></a></span>
+                <span>Powered by <a href="https://bemantech.com" target="_blank"><img src="/_ipx/images/powered-by.png" title="Powered by image" alt="Powered by image" /></a></span>
             </div>
             <div class="developer_info">
-                <span>Developed by <a href="https://orangebd.com" target="_blank"><img src="/_ipx/images/developer.logo.png" title="Developer logo" alt="Developer logo" /></a></span>
+                <span>Developed by <a href="https://bemantech.com" target="_blank"><img src="/_ipx/images/developer.logo.png" title="Developer logo" alt="Developer logo" /></a></span>
             </div>
         </div>
     </div>

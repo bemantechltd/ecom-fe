@@ -34,7 +34,7 @@
                         <div v-html="$store.state.site_basic_config_data.printer_line_txt"></div>
                         <!-- <div>House-171, Lane-1, Baridhara DOHS, Dhaka - 1206</div>
                         <div>Mobile: +880 1716******, +880 1673******</div>
-                        <div>E-mail: <a href="mailto:support@orangebd.com">support@orangebd.com</a></div> -->
+                        <div>E-mail: <a href="mailto:support@bemantech.com">support@bemantech.com</a></div> -->
                     </div>
                 </div>
                 <div class="col-md-4">

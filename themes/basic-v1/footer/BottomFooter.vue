@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-4 pt-2 pb-2" align="right">
                     <div class="developer_info">
-                        <span>Developed by <a href="https://bemantech.com" target="_blank"><img src="https://bemantech.com/wp-content/uploads/2024/04/full-logo.png" title="Developer logo" alt="Developer logo" /></a></span>
+                        <span>Developed by <a href="https://bemantech.com" target="_blank"><img src="~/assets/images/bemantech.png" title="Developer logo" alt="Developer logo" /></a></span>
                     </div>
                 </div>
             </div>
